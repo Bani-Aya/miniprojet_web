@@ -1,3 +1,10 @@
+body {
+    background-color: rgb(243, 243, 231);
+}
+
+a {
+    text-decoration: none;
+}
 
 .page-links {
     position: relative;
@@ -37,6 +44,111 @@
     margin-bottom: 10px;
 }
 
-.page-subtitle{
+.page-subtitle {
     font-size: 3rem;
+}
+
+h1 {
+    font-size: 1.8rem; 
+    margin-top: 2rem;
+    color: #8b5e3c;
+}
+
+.our-services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.our-services h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #fff; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex: 1 1 30%; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card h3 {
+    color: #8b5e3c; 
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #555;
+    margin-bottom: 20px; 
+}
+
+.btn-learn-more {
+    display: inline-block;
+    width: 100%;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    background-color: #cf8f5e;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        flex: 1 1 100%; 
+    }
+
+    .overlay h2 {
+        font-size: 2.5rem; 
+    }
+
+    .page-subtitle {
+        font-size: 2rem;
+    }
+    
+    .btn-learn-more {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay h2 {
+        font-size: 2rem; 
+    }
+
+    .page-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .our-services h1 {
+        font-size: 1.8rem;
+    }
+
+    .service-card {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .btn-learn-more {
+        padding: 10px 15px; 
+        font-size: 14px;
+    }
 }

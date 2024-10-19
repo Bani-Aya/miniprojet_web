@@ -28,18 +28,36 @@ section {
     margin: 10px;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .property-card img {
     width: 100%;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
-.cards-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.property-card:hover img {
+    transform: scale(1.05);
+}
+
+.btn-details {
+    border: 1px solid #8b5e3c;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 4px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.property-card:hover .btn-details {
+    background-color: #aa754c;
+    transform: translateY(-3px);
 }
 
 table {
@@ -103,11 +121,97 @@ h1 {
     margin-top: 2rem;
     color: #8b5e3c;
 }
-
 h2 {
     color: #382424;
 }
+h3 {
+    color: #333;
+    text-align: start;
+    margin-bottom: 1rem;
+  }
+ .form_img{
+width :14rem ; 
+margin:1rem;
+ } 
 
+.buying-process-form {
+
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  span{
+    color: #aa754c;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+   select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .form-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .form-input:focus{
+    outline: none;
+    border-color: #8b5e3c;
+    box-shadow: 0 0 5px #8b5e3cb3;
+  }
+  .form_label{
+    color: #aa754c;
+  }
+  .warning{
+    color: #ef1616;
+  }
+   select:focus, textarea:focus {
+    outline: none;
+    border-color: #8b5e3c;
+    box-shadow: 0 0 5px #8b5e3cb3;
+  }
+  
+  button {
+    display: inline-block;
+    width: 100%;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8b5e3c;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
 .search-section {
     display: flex;
     gap: 20px;
@@ -139,6 +243,19 @@ h2 {
 .input-container input::placeholder {
     color: #999;
 }
+ 
+.img_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_container1{
+     display: flex;
+      align-items: center;
+       justify-content: center;
+        flex-direction: column;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -162,6 +279,13 @@ h2 {
         flex-direction: column; 
         gap: 10px; 
     }
+    .buying-process-form {
+        padding: 15px;
+      }
+
+      button {
+        font-size: 16px;
+      }
 }
 
 @media (max-width: 480px) {
@@ -179,5 +303,95 @@ h2 {
 
     h2 {
         font-size: 1.2rem; 
+         .img_container {
+        flex-direction: column; /* Stack images vertically */
+    }
+    .img_container {
+        flex-direction: column; /* Stack images vertically */
+    }
 }
 }
+
+@media (max-width: 1024px) {
+    .property-listings {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+
+    .service-card {
+        flex: 1 1 45%; /* Slightly wider cards on medium screens */
+    }
+
+    .buying-process-form {
+        padding: 30px; /* Adjust form padding */
+    }
+
+    .overlay h2 {
+        font-size: 3rem; /* Reduce heading size */
+    }
+
+    .page-subtitle {
+        font-size: 2.5rem; /* Reduce subtitle size */
+    }
+}
+
+@media (max-width: 768px) {
+    .property-listings {
+        grid-template-columns: 1fr; /* One column for small screens */
+    }
+
+    .service-card {
+        flex: 1 1 100%; /* Full width for service cards */
+    }
+
+    
+
+    .btn-learn-more {
+        font-size: 16px; /* Slightly smaller button font size */
+    }
+
+    .overlay h2 {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 2rem;
+    }
+    .form_img {
+        max-width: 100%; /* Make images smaller on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-learn-more {
+        font-size: 14px; 
+    }
+
+    .overlay h2 {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.8rem; 
+    }
+    .buying-process-form {
+        padding: 15px;
+        width: 95%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px) {
+    .buying-process-form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+    

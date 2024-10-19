@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Property for Sale</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <h3>Real Estate Sales Portal</h3>
+            </div>
+            <div class="navbar-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html">Property Listings</a></li>
+                    <li><a href="buying-process.html">Buying Process</a></li>
+                    <li><a href="sale.html">Selling Process Tips</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<main>
+    <h1>List Your Property for Sale</h1>
+
+    <form id="property-form" class="buying-process-form">
+        <h3>Step 1: Property Details</h3>
+        
+        <label class="form_label" for="title">Listing Title</label>
+        <input class="form-input" type="text" id="title" name="title" placeholder="Charming family home for sale" required>
+
+        <label class="form_label" for="description">Property Description</label>
+        <textarea class="form-input" id="description" name="description" rows="5" placeholder="Describe the property, its features, etc." required></textarea>
+
+        <label class="form_label" for="price">Price (€)</label>
+        <input class="form-input" type="number" id="price" name="price" placeholder="Sale price" required>
+
+        <label class="form_label" for="address">Full Address</label>
+        <input class="form-input" type="text" id="address" name="address" placeholder="Complete address of the property" required>
+
+        <label class="form_label" for="property-type">Property Type</label>
+        <select class="form-input" id="property-type" name="property-type" required>
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+        </select>
+
+        <label class="form_label" for="size">Size (m²)</label>
+        <input class="form-input" type="number" id="size" name="size" placeholder="Size in m²" required>
+
+        <label class="form_label" for="rooms">Number of Bedrooms</label>
+        <input class="form-input" type="number" id="rooms" name="rooms" placeholder="Number of bedrooms" required>
+
+        <label class="form_label" for="bathrooms">Number of Bathrooms</label>
+        <input class="form-input" type="number" id="bathrooms" name="bathrooms" placeholder="Number of bathrooms" required>
+
+        <h3>Step 2: Additional Features</h3>
+        
+        <label class="form_label">Additional Features</label>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" name="garage" id="garage">
+                <label class="form_label" for="garage">Garage</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" name="pool" id="pool">
+                <label class="form_label" for="pool">Swimming Pool</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" name="garden" id="garden">
+                <label class="form_label" for="garden">Garden</label>
+            </div>
+        </div>
+
+        <label class="form_label" for="images">Upload Images</label>
+        <input class="form-input" type="file" id="images" name="images" accept="image/*" multiple required>
+
+        <h3>Step 3: Review and Submit</h3>
+
+        <div class="submit">
+            <button class="preview-button" type="button">Preview Listing</button>
+            <button type="submit">Submit Listing</button>
+        </div>
+
+        <div class="success-message" id="success-message">Your listing has been successfully submitted!</div>
+        <div class="error-message" id="error-message">There was an error submitting your listing. Please check the form.</div>
+    </form>
+</main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Real Estate Sales Portal</h3>
+                <p>Find your dream property with us.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html">Property Listings</a></li>
+                    <li><a href="buying-process.html">Buying Process</a></li>
+                    <li><a href="sale.html">Selling Process Tips</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Real Estate Sales. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
