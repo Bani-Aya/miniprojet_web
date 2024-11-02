@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <form class="buying-process-form" id="signInForm">
+        <h1>Sign In</h1>
+        <div>
+            <label class="form_label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" placeholder="Enter your email" required />
+            <span class="error-message" id="emailError"></span>
+        </div>
+        <div>
+            <label class="form_label" for="password">Password</label>
+            <input class="form-input" type="password" id="password" placeholder="Enter your password" required />
+            <span class="error-message" id="passwordError"></span>
+        </div>
+        <p id="formMessage" class="error-message warning"></p>
+        <button type="submit">Sign In</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
